@@ -1,0 +1,10 @@
+swarm:
+  datasources:
+    data-sources:
+      MyDS:
+        driver-name: mysql
+        connection-url: jdbc:mysql://localhost:3306/fshop?useSSL=false
+        user-name: zxuqian
+        password: 6417107
+  jpa:
+    default-datasource: MyDS

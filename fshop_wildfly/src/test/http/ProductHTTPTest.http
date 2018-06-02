@@ -1,0 +1,46 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection).
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+# Get all products
+GET http://localhost:8080/product
+Accept: application/json
+
+###
+
+# Get a single products
+GET http://localhost:8080/product/1
+Accept: application/json
+###
+
+# Add a new product
+POST http://localhost:8080/product
+Content-Type: application/json
+
+{
+    "id": 0,
+    "name": "testt",
+    "price": 22.3,
+    "description": "aaaaaaaaaaa"
+}
+
+###
+
+# Update a product
+PUT http://localhost:8080/product
+Content-Type: application/json
+
+{}
+
+###
+
+# Delete a product
+DELETE http://localhost:8080/product/2
+Content-Type: application/json
+
+{}
+
+###
