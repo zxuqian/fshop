@@ -11,10 +11,10 @@ data class Order (
         var orderId: String,
         var priceTotal: Double,
         //cascade = [CascadeType.PERSIST, CascadeType.MERGE]
-        @ManyToMany
+        @ManyToMany(fetch = FetchType.EAGER)
         @JoinTable(name = "order_product")
         var products: List<Product>,
-        @ManyToOne
+        @ManyToOne(fetch = FetchType.EAGER)
         var user: User,
         var status: Status = Status.ACTIVE
 )

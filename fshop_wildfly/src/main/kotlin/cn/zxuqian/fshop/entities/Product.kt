@@ -12,8 +12,9 @@ data class Product(
         var name: String,
         var price: Double,
         var Description: String,
-        @ManyToMany
+        @ManyToMany(fetch = FetchType.EAGER)
         @JoinTable(name = "product_catalog")
         var catalogs: List<Catalog>,
+        //@Enumerated(EnumType.ORDINAL)
         var status: Status = Status.ACTIVE
 )

@@ -11,6 +11,4 @@ import javax.transaction.Transactional
 @Open
 @Transactional
 @ApplicationScoped
-class ProductService : AbstractService<Product>() {
-
-}
+class ProductService : AbstractService<Product>()

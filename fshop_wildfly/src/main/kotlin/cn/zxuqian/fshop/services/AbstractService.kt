@@ -10,7 +10,7 @@ abstract class AbstractService<T> {
     @PersistenceContext(name="MyPU")
     protected lateinit var em: EntityManager
 
-    fun getById(id: Int, entity: Class<T>): T {
+    fun getById(id: Long, entity: Class<T>): T {
 
         return em.find(entity, id)
     }
@@ -27,7 +27,7 @@ abstract class AbstractService<T> {
         em.merge(t)
     }
 
-    fun remove(id: Int, entity: Class<T>) {
+    fun remove(id: Long, entity: Class<T>) {
         em.remove(getById(id, entity))
     }
 

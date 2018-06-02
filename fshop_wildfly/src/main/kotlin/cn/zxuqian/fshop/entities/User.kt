@@ -10,7 +10,7 @@ data class User (
         var id: Long,
         var username: String,
         var password: String,
-        @OneToMany(mappedBy = "user")
+        @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
         var orders: List<Order>,
         var status:Status = Status.ACTIVE
 )

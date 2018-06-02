@@ -24,7 +24,8 @@ Content-Type: application/json
     "id": 0,
     "name": "testt",
     "price": 22.3,
-    "description": "aaaaaaaaaaa"
+    "description": "aaaaaaaaaaa",
+    "status": 1
 }
 
 ###
