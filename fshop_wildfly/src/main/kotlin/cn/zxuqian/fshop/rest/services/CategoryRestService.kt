@@ -1,12 +1,12 @@
 package cn.zxuqian.fshop.rest.services
 
 import cn.zxuqian.fshop.annotations.Open
-import cn.zxuqian.fshop.entities.Catalog
-import cn.zxuqian.fshop.entities.Order
-import cn.zxuqian.fshop.entities.User
+import cn.zxuqian.fshop.entities.Category
 import cn.zxuqian.fshop.services.AbstractService
+import cn.zxuqian.fshop.services.CategoryService
 import javax.enterprise.context.RequestScoped
 import javax.inject.Inject
+import javax.inject.Qualifier
 import javax.ws.rs.Path
 
 /**
@@ -15,7 +15,7 @@ import javax.ws.rs.Path
 @Open
 @Path("/category")
 @RequestScoped
-class CatalogRestService : AbstractRestService<Catalog>(Catalog::class.java) {
+class CategoryRestService : AbstractRestService<Category>(Category::class.java) {
     @Inject
-    protected override lateinit var service: AbstractService<Catalog>
+    protected override lateinit var service: CategoryService
 }

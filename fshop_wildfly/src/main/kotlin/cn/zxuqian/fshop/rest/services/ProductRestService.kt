@@ -5,6 +5,7 @@ import cn.zxuqian.fshop.entities.Product
 import cn.zxuqian.fshop.services.ProductService
 import javax.enterprise.context.RequestScoped
 import javax.inject.Inject
+import javax.inject.Qualifier
 import javax.ws.rs.Path
 
 /**
