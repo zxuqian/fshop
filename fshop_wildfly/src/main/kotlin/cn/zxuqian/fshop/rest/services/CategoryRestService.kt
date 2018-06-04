@@ -13,7 +13,7 @@ import javax.ws.rs.Path
  * Restful Web Service for order management.
  */
 @Open
-@Path("/catalog")
+@Path("/category")
 @RequestScoped
 class CatalogRestService : AbstractRestService<Catalog>(Catalog::class.java) {
     @Inject
