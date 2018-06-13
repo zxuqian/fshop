@@ -1,4 +1,8 @@
 package cn.zxuqian.fshop.services.contract
 
-interface IOrderService {
+import cn.zxuqian.fshop.entities.Product
+import cn.zxuqian.fshop.services.GenericService
+
+interface IProductService : IGenericService<Product> {
+
 }

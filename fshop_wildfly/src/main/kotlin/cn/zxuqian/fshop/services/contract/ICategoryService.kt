@@ -1,4 +1,6 @@
 package cn.zxuqian.fshop.services.contract
 
-interface ICategoryService {
+import cn.zxuqian.fshop.entities.Category
+
+interface ICategoryService : IGenericService<Category> {
 }

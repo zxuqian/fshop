@@ -1,12 +1,9 @@
 package cn.zxuqian.fshop.rest.services
 
 import cn.zxuqian.fshop.annotations.Open
-import cn.zxuqian.fshop.entities.Product
-import cn.zxuqian.fshop.services.AbstractService
-import cn.zxuqian.fshop.services.ProductService
+import cn.zxuqian.fshop.services.GenericService
 import java.util.logging.Logger
 import javax.enterprise.context.RequestScoped
-import javax.inject.Inject
 import javax.ws.rs.*
 import javax.ws.rs.core.MediaType.*
 import javax.ws.rs.core.Response
@@ -22,7 +19,7 @@ abstract class AbstractRestService<T>(val clazz: Class<T>) {
 
     private val log: Logger = Logger.getLogger(clazz.canonicalName)
 
-    protected abstract val service: AbstractService<T>
+    protected abstract val service: GenericService<T>
 
     @GET
     @Produces(APPLICATION_JSON)

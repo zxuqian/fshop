@@ -1,15 +1,15 @@
 package cn.zxuqian.fshop.services
 
 import cn.zxuqian.fshop.annotations.Open
-import cn.zxuqian.fshop.services.contract.IGeneralService
+import cn.zxuqian.fshop.services.contract.IGenericService
 import javax.persistence.EntityManager
 import javax.persistence.PersistenceContext
 
 @Open
-class AbstractService<T> : IGeneralService<T> {
+class GenericService<T> : IGenericService<T> {
 
     @PersistenceContext(name="MyPU")
-    private lateinit var em: EntityManager
+    protected lateinit var em: EntityManager
 
     override fun getById(id: Long, entity: Class<T>): T {
 

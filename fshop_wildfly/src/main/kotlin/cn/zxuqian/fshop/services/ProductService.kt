@@ -2,8 +2,8 @@ package cn.zxuqian.fshop.services
 
 import cn.zxuqian.fshop.annotations.Open
 import cn.zxuqian.fshop.entities.Product
+import cn.zxuqian.fshop.services.contract.IProductService
 import javax.enterprise.context.ApplicationScoped
-import javax.inject.Qualifier
 import javax.transaction.Transactional
 
 /**
@@ -12,7 +12,7 @@ import javax.transaction.Transactional
 @Open
 @Transactional
 @ApplicationScoped
-class ProductService : AbstractService<Product>()
+class ProductService : GenericService<Product>(), IProductService
 
 //@Qualifier
 //@Retention(AnnotationRetention.RUNTIME)

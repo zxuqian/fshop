@@ -1,4 +1,6 @@
 package cn.zxuqian.fshop.services.contract
 
-interface IProductService {
+import cn.zxuqian.fshop.entities.User
+
+interface IUserService : IGenericService<User> {
 }

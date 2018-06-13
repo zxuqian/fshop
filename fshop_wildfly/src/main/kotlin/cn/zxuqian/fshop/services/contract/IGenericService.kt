@@ -3,10 +3,10 @@ package cn.zxuqian.fshop.services.contract
 import javax.persistence.EntityManager
 import javax.persistence.PersistenceContext
 
-interface IGeneralService<T> {
+interface IGenericService<T> {
     //val em: EntityManager
 
-    fun getById(id: Long, entity: Class<T>)
+    fun getById(id: Long, entity: Class<T>): T
 
     fun getAll(entity: Class<T>): List<T>
 
