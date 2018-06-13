@@ -1,0 +1,18 @@
+package cn.zxuqian.fshop.services.contract
+
+import javax.persistence.EntityManager
+import javax.persistence.PersistenceContext
+
+interface IGeneralService<T> {
+    //val em: EntityManager
+
+    fun getById(id: Long, entity: Class<T>)
+
+    fun getAll(entity: Class<T>): List<T>
+
+    fun create(t: T)
+
+    fun update(t: T)
+
+    fun remove(id: Long, entity: Class<T>)
+}
