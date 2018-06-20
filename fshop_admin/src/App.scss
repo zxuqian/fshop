@@ -26,9 +26,13 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 } */
+
+@import './styles/common/variable.scss';
+
 /* customize */
 .columns {
-  margin-top: 0; }
+  margin-top: 0;
+}
 
 /*.input, .textarea, .select {
   border: none;
@@ -42,24 +46,28 @@ input:active, textarea:active, select:active {
   box-shadow: none;
 }
 */
+
 /* layout */
 .main, .overview, .menu {
-  padding: 1.5rem 1.5rem; }
+  padding: 1.5rem 1.5rem;
+}
 
 /* sidebar menu */
 .menu {
-  background-color: #2c435f;
+  background-color: $menu-bg-color;
   /*max-width: 200px;
   min-width: 200px;
-  width: 200px;*/ }
-
+  width: 200px;*/
+}
 .menu-list a {
-  color: #c4e0ff; }
+  color: $menu-item-color;
+}
 
 .font-icon {
   margin-right: 10px;
   width: 20px !important;
-  height: 20px; }
+  height: 20px;
+}
 
 /* overview */
 .overview {
@@ -67,34 +75,42 @@ input:active, textarea:active, select:active {
   padding: 0;
   padding-top: 1.5rem;
   border-right: 1px solid #efefefeb;
-  box-shadow: 1px 0px 10px #dcdcdc61; }
+  box-shadow: 1px 0px 10px #dcdcdc61;
+}
 
 .ov-header, .ov-item {
-  padding: 0.5rem 1.5rem; }
+  padding: 0.5rem 1.5rem;
+}
 
 .overview .active-item {
-  background: #ffffff; }
+  background: #ffffff;
+}
+
 
 .ov-item {
   border: 1px solid #cfd8dc57;
   border-left: none;
   border-right: none;
   margin-top: -1px;
-  padding: 1.5rem 1.5rem; }
+  padding: 1.5rem 1.5rem;
+}
 
 .ov-title {
   font-weight: 500;
   font-size: 13px;
-  padding-bottom: 0.5rem; }
+  padding-bottom: 0.5rem;
+}
 
 .ov-description {
   font-size: 12px;
-  color: #546e7a; }
+  color: #546e7a;
+}
 
 /* main */
 .main {
-  background-color: #fbfbfb; }
-
+  background-color: $main-bg-color;
+}
 .header h1 {
   font-size: 24px;
-  padding-bottom: 1.5rem; }
+  padding-bottom: 1.5rem;
+}

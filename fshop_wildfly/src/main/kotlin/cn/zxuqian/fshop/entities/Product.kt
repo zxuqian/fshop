@@ -11,6 +11,7 @@ data class Product(
         var id: Long = 0,
         var name: String,
         var price: Double,
+        var count: Int,
         var Description: String,
         @ManyToMany(fetch = FetchType.EAGER)
         @JoinTable(name = "product_category")

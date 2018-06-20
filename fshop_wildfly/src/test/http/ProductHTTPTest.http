@@ -17,13 +17,14 @@ Accept: application/json
 ###
 
 # Add a new product
-POST http://localhost:8080/product
+POST http://localhost:8080/product/
 Content-Type: application/json
 
 {
     "id": 0,
     "name": "testt",
     "price": 22.3,
+    "count": 5,
     "description": "aaaaaaaaaaa",
     "status": 1
 }

@@ -3,6 +3,11 @@ import React, { Component } from 'react';
 import Sidebar from './components/Sidebar';
 import Overview from './components/product/Overview';
 import Main from './components/Main';
+import AddProductForm from './components/product/AddProductForm';
+
+import rootReducer from './reducers';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 
 import fontawesome from '@fortawesome/fontawesome';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
@@ -18,14 +23,18 @@ import './App.css';
 
 fontawesome.library.add(faListUl, faCubes, faDollarSign, faUser)
 
+const store = createStore(rootReducer)
+
 class App extends Component {
   render() {
     return (
-      <div className="test columns">
-        <Sidebar />
-        <Overview />
-        <Main />
-      </div>
+      <Provider store={store}>
+        <div className="test columns">
+          <Sidebar />
+          <Overview />
+          <AddProductForm />
+        </div>
+      </Provider>
     );
   }
 }
