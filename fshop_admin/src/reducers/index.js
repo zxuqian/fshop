@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
-import products from './product.js'
+import product from './product.js'
 
 export default combineReducers({
-    products
+    product
 })

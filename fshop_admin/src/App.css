@@ -26,6 +26,9 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 } */
+.app {
+  max-height: 100vh; }
+
 /* customize */
 .columns {
   margin-top: 0; }
@@ -67,7 +70,8 @@ input:active, textarea:active, select:active {
   padding: 0;
   padding-top: 1.5rem;
   border-right: 1px solid #efefefeb;
-  box-shadow: 1px 0px 10px #dcdcdc61; }
+  box-shadow: 1px 0px 10px #dcdcdc61;
+  overflow-y: auto; }
 
 .ov-header, .ov-item {
   padding: 0.5rem 1.5rem; }

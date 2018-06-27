@@ -5,8 +5,7 @@ import Overview from './components/product/Overview';
 import Main from './components/Main';
 import AddProductForm from './components/product/AddProductForm';
 
-import rootReducer from './reducers';
-import { createStore } from 'redux';
+import store from './store';
 import { Provider } from 'react-redux';
 
 import fontawesome from '@fortawesome/fontawesome';
@@ -23,13 +22,12 @@ import './App.css';
 
 fontawesome.library.add(faListUl, faCubes, faDollarSign, faUser)
 
-const store = createStore(rootReducer)
 
 class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <div className="test columns">
+        <div className="app columns">
           <Sidebar />
           <Overview />
           <AddProductForm />

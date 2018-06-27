@@ -10,9 +10,9 @@ interface IGenericService<T> {
 
     fun getAll(entity: Class<T>): List<T>
 
-    fun create(t: T)
+    fun create(t: T): T
 
-    fun update(t: T)
+    fun update(t: T): T
 
     fun remove(id: Long, entity: Class<T>)
 }

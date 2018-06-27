@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import {bindActionCreators} from 'redux';
 import '../../styles/product/AddProductForm.css';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import axios from 'axios';
@@ -20,7 +21,7 @@ class AddProductForm extends Component {
                 description: ''
             }
         }
-        this.dispatch = this.props.dispatch;
+        //this.dispatch = this.props.dispatch;
         
 
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -43,9 +44,10 @@ class AddProductForm extends Component {
         })
     }
 
-    async handleSubmit(event) {
+    handleSubmit(event) {
         event.preventDefault();
-        this.dispatch(addProduct(this.state.product))
+        this.props.addProduct(this.state.product);
+        //this.dispatch(addProduct(this.state.product))
 
         // console.log(this.state);
         // // make request
@@ -127,4 +129,15 @@ class AddProductForm extends Component {
         )
     }
 }
-export default connect()(AddProductForm);
+
+function mapStateToProps(state) {
+    return {}
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+        addProduct: bindActionCreators(addProduct, dispatch)
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(AddProductForm);

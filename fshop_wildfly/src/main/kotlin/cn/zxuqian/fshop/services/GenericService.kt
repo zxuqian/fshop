@@ -20,12 +20,14 @@ class GenericService<T> : IGenericService<T> {
         return em.createQuery("from " + entity.simpleName, entity).resultList
     }
 
-    override fun create(t: T) {
+    override fun create(t: T): T {
         em.persist(t)
+        return t
     }
 
-    override fun update(t: T) {
+    override fun update(t: T): T {
         em.merge(t)
+        return t
     }
 
     override fun remove(id: Long, entity: Class<T>) {

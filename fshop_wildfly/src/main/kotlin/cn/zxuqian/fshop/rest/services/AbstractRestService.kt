@@ -49,13 +49,13 @@ abstract class AbstractRestService<T>(val clazz: Class<T>) {
     }
 
     @POST
-    //@Produces(APPLICATION_JSON)
+    @Produces(APPLICATION_JSON)
     @Consumes(APPLICATION_JSON)
     fun create(entity: T): Response {
         try {
             //val product = Product(0, "123", 22.0, "dsfddd")
-            service.create(entity)
-            return Response.status(CREATED).build()
+            val product = service.create(entity)
+            return Response.status(CREATED).entity(product).build()
         } catch (e: Exception) {
             e.printStackTrace()
             log.severe("添加失败: ${clazz.canonicalName}")
@@ -68,8 +68,8 @@ abstract class AbstractRestService<T>(val clazz: Class<T>) {
     fun update(entity: T): Response {
         try {
             //val product = Product(1, "234", 52.0, "aaaa")
-            service.update(entity)
-            return Response.status(OK).build()
+            val product = service.update(entity)
+            return Response.status(OK).entity(product).build()
         } catch (e: Exception) {
             e.printStackTrace()
             log.severe("更新失败: ${clazz.canonicalName}")

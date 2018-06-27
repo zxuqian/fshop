@@ -1,18 +1,30 @@
-import { ADD_PRODUCT } from '../actions/product'
+import { 
+    ADD_PRODUCT, 
+    FETCH_PRODUCTS
+ } from '../actions/product'
 
-const products = (state = [], action) => {
+let initialState = {
+    isFetching: false,
+    items: []
+};
+
+const product = (state = initialState, action) => {
     switch (action.type) {
         case ADD_PRODUCT:
-            console.log(action);
-            return [
+            return {
                 ...state,
-                action.product
-            ]
+                items: [...state.items, action.product]
+            }
+        case FETCH_PRODUCTS:
+            return {
+                ...state,
+                items: action.products
+            }  
         default:
             return state;
     }
 
 }
 
-export default products;
+export default product;
 
