@@ -7,23 +7,23 @@ FShop 项目为电子商务系统的后台服务，提供基于 RESTful 的API�
 - 库存管理
 - 分销管理
 - 订单管理
-- 财务管理
+- 财务管理
 - 物流管理
 - 会员管理
 - 优惠券
-- 活动管理
+- 活动管理
 - 积分管理
-- 消费者行为分析
+- 消费者行为分析
 - 产品推荐
 - 人工智能客服
 - 报表
 - 工作流
 - 系统设置
 
-## 主要技术架构
+## 主要技术架构
 项目的技术架构将不限制于一种，后期会采用微服务架构，使用合适的语言编写对应的服务。目前所用技术如下：
 
-### 数据库
+### 数据库
 MySQL 8.0
 
 ### 后台服务
@@ -77,6 +77,7 @@ mvn mvn wildfly-swarm:run
 ```
 cd fshop_admin
 npm install
+npm start
 ```
 
 ## 版本更新历史
@@ -97,8 +98,8 @@ npm install
 
 [https://github.com/zxuqian/fshop](https://github.com/zxuqian/fshop)
 
-## 协作
+## 协作
 
-## 捐助
+## 捐助
 :dollar: :dollar:
 项目开发不易，还请大家能够施以援手让项目持续进行下去。支付宝账号：zxuqian@gmail.com，或添加微信进行转账。
