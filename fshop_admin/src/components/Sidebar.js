@@ -1,12 +1,14 @@
-import React, { Component } from 'react';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 
 class Sidebar extends Component {
     render() {
         return (
             <aside className="menu hero is-fullheight column is-2">
                 <ul className="menu-list">
-                    <li><a href="#"><FontAwesomeIcon className="font-icon" icon="list-ul" />产品管理</a></li>
+                    <li><Link to="/product"><FontAwesomeIcon className="font-icon" icon="list-ul" />产品管理</Link></li>
                     <li><a href="#"><FontAwesomeIcon className="font-icon" icon="cubes" />类别管理</a></li>
                     <li><a href="#"><FontAwesomeIcon className="font-icon" icon="dollar-sign" />订单管理</a></li>
                     <li><a href="#"><FontAwesomeIcon className="font-icon" icon="user" />用户管理</a></li>
@@ -15,4 +17,4 @@ class Sidebar extends Component {
         )
     }
 }
-export default Sidebar;
+export default Sidebar

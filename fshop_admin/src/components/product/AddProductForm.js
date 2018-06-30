@@ -1,13 +1,14 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import {bindActionCreators} from 'redux';
-import '../../styles/product/AddProductForm.css';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import axios from 'axios';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+//import { withRouter } from 'react-router-dom'
+import '../../styles/product/AddProductForm.css'
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+import axios from 'axios'
 
-import Main from '../Main';
+import Main from '../Main'
 
-import { addProduct } from '../../actions/product';
+import { addProduct } from '../../actions/product'
 
 class AddProductForm extends Component {
 
@@ -21,21 +22,21 @@ class AddProductForm extends Component {
                 description: ''
             }
         }
-        //this.dispatch = this.props.dispatch;
+        //this.dispatch = this.props.dispatch
         
 
-        this.handleInputChange = this.handleInputChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleInputChange = this.handleInputChange.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)
 
         // this.request = axios.create({
         //     baseURL: 'http://localhost:8080/product'
-        // });
+        // })
     }
 
     handleInputChange(event) {
-        const target = event.target;
-        const value = target.type === 'checkbox' ? target.checked : target.value;
-        const name = target.name;
+        const target = event.target
+        const value = target.type === 'checkbox' ? target.checked : target.value
+        const name = target.name
         this.setState({
             product: {
                 ...this.state.product,
@@ -45,14 +46,14 @@ class AddProductForm extends Component {
     }
 
     handleSubmit(event) {
-        event.preventDefault();
-        this.props.addProduct(this.state.product);
+        event.preventDefault()
+        this.props.addProduct(this.state.product)
         //this.dispatch(addProduct(this.state.product))
 
-        // console.log(this.state);
+        // console.log(this.state)
         // // make request
         // try {
-        //     const response = await this.request.post("/", this.state.product);
+        //     const response = await this.request.post("/", this.state.product)
         //     console.log(response)
         // } catch (error) {
         //     alert(error)
@@ -140,4 +141,5 @@ function mapDispatchToProps(dispatch) {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(AddProductForm);
+//withRouter(connect(mapStateToProps, mapDispatchToProps)(AddProductForm))
+export default connect(mapStateToProps, mapDispatchToProps)(AddProductForm)

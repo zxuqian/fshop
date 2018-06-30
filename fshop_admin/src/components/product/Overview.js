@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+//import { withRouter } from 'react-router-dom'
 //import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 
-import { fetchProducts } from '../../actions/product'
+import { fetchProducts, selectProduct } from '../../actions/product'
 
 class Overview extends Component {
 
@@ -14,6 +15,11 @@ class Overview extends Component {
     componentDidMount() {
         this.props.fetchProducts()
     }
+
+    itemClicked(index) {
+        this.props.selectProduct(index)
+    }
+
     render() {
         return (
             <section className="overview column is-3">
@@ -22,8 +28,8 @@ class Overview extends Component {
                 </div>
                 <ul>
                     {
-                        this.props.products.map(product => {
-                            return (<li key={ product.id }>
+                        this.props.products.map((product, index) => {
+                            return (<li key={ product.id } onClick={this.itemClicked.bind(this, index)}>
                                 <div className="ov-item active-item">
                                     <div className="ov-title">{ product.name }</div>
                                     <div className="ov-description">{ product.description }</div>
@@ -45,8 +51,10 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        fetchProducts: bindActionCreators(fetchProducts, dispatch)
+        fetchProducts: bindActionCreators(fetchProducts, dispatch),
+        selectProduct: bindActionCreators(selectProduct, dispatch)
     }
 }
 
+//withRouter(connect(mapStateToProps, mapDispatchToProps)(Overview))
 export default connect(mapStateToProps, mapDispatchToProps)(Overview)

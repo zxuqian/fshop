@@ -1,11 +1,13 @@
 import { 
     ADD_PRODUCT, 
-    FETCH_PRODUCTS
+    FETCH_PRODUCTS,
+    SELECT_PRODUCT
  } from '../actions/product'
 
 let initialState = {
     isFetching: false,
-    items: []
+    items: [],
+    currentSelectedProductIndex: 0
 };
 
 const product = (state = initialState, action) => {
@@ -20,6 +22,11 @@ const product = (state = initialState, action) => {
                 ...state,
                 items: action.products
             }  
+        case SELECT_PRODUCT:
+            return {
+                ...state,
+                currentSelectedProductIndex: action.index
+            }
         default:
             return state;
     }
