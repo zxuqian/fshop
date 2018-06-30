@@ -92,6 +92,10 @@ npm start
 
 开发者：张旭乾 – [@乾儿_Polaris](https://weibo.com/jeffava) – zxuqian@163.com
 
+博客：
+- [http://www.zxuqian.cn](http://www.zxuqian.cn)
+- [http://www.zxuqian.com](http://www.zxuqian.com)
+
 微信：17803227910
 
 基于MIT协议分发，详见 ``LICENSE``。
