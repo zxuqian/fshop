@@ -81,31 +81,24 @@ npm install
 
 ## 版本更新历史
 
-* 0.2.1
-    * CHANGE: Update docs (module code remains unchanged)
-* 0.2.0
-    * CHANGE: Remove `setDefaultXYZ()`
-    * ADD: Add `init()`
-* 0.1.1
-    * FIX: Crash when calling `baz()` (Thanks @GenerousContributorName!)
-* 0.1.0
-    * The first proper release
-    * CHANGE: Rename `foo()` to `bar()`
 * 0.0.1
-    * Work in progress
+    项目进行中
+    * 变更: 搭建项目开发环境
+    * 功能: 实现添加产品后台API
+    * 功能: 实现前台调用API添加产品
 
-## Meta
+## 项目信息
 
-Your Name – [@YourTwitter](https://twitter.com/dbader_org) – YourEmail@example.com
+开发者：张旭乾 – [@乾儿_Polaris](https://weibo.com/jeffava) – zxuqian@163.com
 
-Distributed under the XYZ license. See ``LICENSE`` for more information.
+微信：17803227910
 
-[https://github.com/yourname/github-link](https://github.com/dbader/)
+基于MIT协议分发，详见 ``LICENSE``。
 
-## Contributing
+[https://github.com/zxuqian/fshop](https://github.com/zxuqian/fshop)
 
-1. Fork it (<https://github.com/yourname/yourproject/fork>)
-2. Create your feature branch (`git checkout -b feature/fooBar`)
-3. Commit your changes (`git commit -am 'Add some fooBar'`)
-4. Push to the branch (`git push origin feature/fooBar`)
-5. Create a new Pull Request
+## 协作
+
+## 捐助
+
+项目开发不易，还请大家能够施以援手让项目持续进行下去。支付宝账号：zxuqian@gmail.com，或添加微信进行转账。
