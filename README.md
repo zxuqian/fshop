@@ -109,8 +109,8 @@ npm start
 
 ## 捐助
 
-<img src="https://github.com/zxuqian/fshop/raw/master/screenshots/alipay.jpg" alt="alipay" height="200">
-<img src="https://github.com/zxuqian/fshop/raw/master/screenshots/wechat.png" alt="alipay" height="200">
+<img src="https://github.com/zxuqian/fshop/raw/master/screenshots/alipay.jpg" alt="alipay" height="200" style="float:left">
+<img src="https://github.com/zxuqian/fshop/raw/master/screenshots/wechat.png" alt="alipay" height="200" style="float:left; clear: both">
 
 :dollar: :dollar:
 项目开发不易，还请大家能够施以援手让项目持续进行下去。支付宝账号：zxuqian@gmail.com，或添加微信进行转账。
