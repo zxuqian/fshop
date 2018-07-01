@@ -108,10 +108,12 @@ npm start
 ## 协作
 
 ## 捐助
-<div style="border: 1px solid #efefef">
+<kbd>
     <img src="https://github.com/zxuqian/fshop/raw/master/screenshots/wechat.png" alt="alipay" height="200" align="right">
+</kbd>
+<kbd>
     <img src="https://github.com/zxuqian/fshop/raw/master/screenshots/alipay.jpg" alt="alipay" height="200" align="right">
-</div>
+</kbd>
 
 
 :dollar: :dollar:
