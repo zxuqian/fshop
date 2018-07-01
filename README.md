@@ -109,7 +109,7 @@ npm start
 
 ## 捐助
 
-<img src="https://github.com/zxuqian/fshop/raw/master/screenshots/alipay.jpg" alt="alipay" height="200" align="left">
+<img src="https://github.com/zxuqian/fshop/raw/master/screenshots/alipay.jpg" alt="alipay" height="200" align="right">
 <img src="https://github.com/zxuqian/fshop/raw/master/screenshots/wechat.png" alt="alipay" height="200" align="right">
 
 :dollar: :dollar:
