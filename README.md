@@ -106,5 +106,8 @@ npm start
 ## 协作
 
 ## 捐助
+![alipay](https://github.com/zxuqian/fshop/raw/master/screenshots/alipay.jpg "Alipay")
+![wechat_pay](https://github.com/zxuqian/fshop/raw/master/screenshots/wechat.jpg "wechat_pay")
+
 :dollar: :dollar:
 项目开发不易，还请大家能够施以援手让项目持续进行下去。支付宝账号：zxuqian@gmail.com，或添加微信进行转账。
