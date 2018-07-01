@@ -21,7 +21,7 @@ FShop 项目为电子商务系统的后台服务，提供基于 RESTful 的API�
 - 系统设置
 
 ## 主要技术架构
-项目的技术架构将不限制于一种，后期会采用微服务架构，使用合适的语言编写对应的服务。目前所用技术如下：
+项目的技术架构将不限制于一种，后期会采用微服务架构，使用合适的语言编写对应的服务。目前所用技术如下：
 
 ### 数据库
 MySQL 8.0
@@ -69,7 +69,7 @@ git clone https://github.com/zxuqian/fshop.git
 
 ```
 cd fshop_wildfly
-mvn mvn wildfly-swarm:run
+mvn wildfly-swarm:run
 ```
 
 运行后台管理界面应用：
@@ -83,6 +83,7 @@ npm start
 ## 版本更新历史
 
 * 0.0.1
+
     项目进行中
     * 变更: 搭建项目开发环境
     * 功能: 实现添加产品后台API
