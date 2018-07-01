@@ -1,6 +1,8 @@
 # FShop 未来电子商务平台
 > FShop将致力于提供完整的电商服务功能，结合大数据、机器学习、人工智能技术打造人性化商业服务和用户服务。
 
+<img src="https://github.com/zxuqian/fshop/raw/master/screenshots/interface.png" alt="screenshot">
+
 FShop 项目为电子商务系统的后台服务，提供基于 RESTful 的API接口和使用 React 开发的后台管理界面。项目将预计提供以下功能：
 
 - 产品管理
@@ -106,8 +108,9 @@ npm start
 ## 协作
 
 ## 捐助
-![alipay](https://github.com/zxuqian/fshop/raw/master/screenshots/alipay.jpg "Alipay")
-![wechat_pay](https://github.com/zxuqian/fshop/raw/master/screenshots/wechat.jpg "wechat_pay")
+
+<img src="https://github.com/zxuqian/fshop/raw/master/screenshots/alipay.jpg" alt="alipay" height="200">
+<img src="https://github.com/zxuqian/fshop/raw/master/screenshots/wechat.png" alt="alipay" height="200">
 
 :dollar: :dollar:
 项目开发不易，还请大家能够施以援手让项目持续进行下去。支付宝账号：zxuqian@gmail.com，或添加微信进行转账。
