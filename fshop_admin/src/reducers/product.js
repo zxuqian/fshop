@@ -7,7 +7,7 @@ import {
 let initialState = {
     isFetching: false,
     items: [],
-    currentSelectedProductIndex: 0
+    currentSelectedProductIndex: -1
 };
 
 const product = (state = initialState, action) => {

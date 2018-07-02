@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-//import { withRouter } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 //import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 
 import { fetchProducts, selectProduct } from '../../actions/product'
@@ -18,6 +18,8 @@ class Overview extends Component {
 
     itemClicked(index) {
         this.props.selectProduct(index)
+        let selectedProduct = this.props.products[index]
+        this.props.history.push(`/product/${selectedProduct.id}`)
     }
 
     render() {
@@ -56,5 +58,4 @@ function mapDispatchToProps(dispatch) {
     }
 }
 
-//withRouter(connect(mapStateToProps, mapDispatchToProps)(Overview))
-export default connect(mapStateToProps, mapDispatchToProps)(Overview)
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Overview))

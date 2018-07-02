@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import AddProductForm from './product/AddProductForm';
+import ProductForm from './product/ProductForm';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 
 class Main extends Component {
