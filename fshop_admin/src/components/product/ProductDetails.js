@@ -3,21 +3,33 @@ import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 
 import Main from '../Main'
+import { selectProduct } from '../../actions/product'
+import { bindActionCreators } from 'redux';
 
 class ProductDetails extends Component {
 
     constructor(props) {
         super(props)
-        this.id = props.match.params.id
     }
 
     render() {
-        let isSelected = this.props.currentSelectedProductIndex != -1
-        let product = {}
-        if (isSelected) {
-            product = this.props.items[this.props.currentSelectedProductIndex]
-        } else {
-            //product = this.props.items.fi
+        // let isSelected = this.props.currentSelectedProductId != -1
+        // let product = {}
+        // if (isSelected) {
+        //     product = this.props.products[this.props.currentSelectedProductId]
+        // } else {
+        //     //product = this.props.items.fi
+        //     return null
+        // }
+        let id = this.props.match.params.id
+        let product = this.props.findProductById(id)
+
+        // If brwoser is refreshing, due to the nature of client side javascript,
+        // Product can not be obtained because the parent ProductPage component
+        // has not fetched products yet, so null should be returned to prevent
+        // rendering, and when the products loaded, it will render again and this
+        // time will be correct.
+        if(!product) {
             return null
         }
         return (
@@ -36,10 +48,16 @@ class ProductDetails extends Component {
 
 function mapStateToProps(state) {
     return {
-        currentSelectedProductIndex: state.product.currentSelectedProductIndex,
-        items: state.product.items
+        currentSelectedProductId: state.product.currentSelectedProductId,
+        products: state.product.entities.products
+    }
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+        selectProduct: bindActionCreators(selectProduct, dispatch)
     }
 }
 
 //withRouter(connect(mapStateToProps)(ProductDetails))
-export default withRouter(connect(mapStateToProps)(ProductDetails))
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ProductDetails))

@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { normalize, schema } from 'normalizr'
 
 const request = axios.create({
     baseURL: 'http://localhost:8080/product'
@@ -15,6 +16,10 @@ export const FETCH_PRODUCTS = 'FETCH_PRODUCTS'
 export const SELECT_PRODUCT = 'SELECT_PRODUCT'
 //export const FETCH_PRODUCT_BY_ID = 'FETCH_PRODUCT_BY_ID'
 //export const PRODUCT_ADDED = 'PRODUCT_ADDED'
+
+// Define schemas
+const product = new schema.Entity('products')
+const productList = [product]
 
 export const addProduct = product => {
     // return {
@@ -40,7 +45,7 @@ export const fetchProducts = () => {
             const response = await request.get("/")
             dispatch({
                 type: FETCH_PRODUCTS,
-                products: response.data
+                products: normalize(response.data, productList)
             })
         } catch (error) {
             console.log(error)
@@ -48,10 +53,10 @@ export const fetchProducts = () => {
     }
 }
 
-export const selectProduct = (index) => {
+export const selectProduct = (id) => {
     return {
         type: SELECT_PRODUCT,
-        index
+        id
     }
 }
 

@@ -12,16 +12,6 @@ class Overview extends Component {
         super(props)
     }
 
-    componentDidMount() {
-        this.props.fetchProducts()
-    }
-
-    itemClicked(index) {
-        this.props.selectProduct(index)
-        let selectedProduct = this.props.products[index]
-        this.props.history.push(`/product/${selectedProduct.id}`)
-    }
-
     render() {
         return (
             <section className="overview column is-3">
@@ -30,11 +20,11 @@ class Overview extends Component {
                 </div>
                 <ul>
                     {
-                        this.props.products.map((product, index) => {
-                            return (<li key={ product.id } onClick={this.itemClicked.bind(this, index)}>
+                        Object.keys(this.props.products).map((key) => {
+                            return (<li key={ key } onClick={ this.props.itemClicked.bind(this, key) }>
                                 <div className="ov-item active-item">
-                                    <div className="ov-title">{ product.name }</div>
-                                    <div className="ov-description">{ product.description }</div>
+                                    <div className="ov-title">{ this.props.products[key].name }</div>
+                                    <div className="ov-description">{ this.props.products[key].description }</div>
                                 </div>
                             </li>)
                         })
@@ -45,17 +35,5 @@ class Overview extends Component {
     }
 }
 
-function mapStateToProps(state) {
-    return {
-        products: state.product.items
-    }
-}
 
-function mapDispatchToProps(dispatch) {
-    return {
-        fetchProducts: bindActionCreators(fetchProducts, dispatch),
-        selectProduct: bindActionCreators(selectProduct, dispatch)
-    }
-}
-
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Overview))
+export default Overview

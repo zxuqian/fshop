@@ -6,8 +6,10 @@ import {
 
 let initialState = {
     isFetching: false,
-    items: [],
-    currentSelectedProductIndex: -1
+    entities:{
+        products: {}
+    },
+    currentSelectedProductId: -1
 };
 
 const product = (state = initialState, action) => {
@@ -20,12 +22,12 @@ const product = (state = initialState, action) => {
         case FETCH_PRODUCTS:
             return {
                 ...state,
-                items: action.products
+                ...action.products
             }  
         case SELECT_PRODUCT:
             return {
                 ...state,
-                currentSelectedProductIndex: action.index
+                currentSelectedProductId: action.id
             }
         default:
             return state;
